@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<style>
+body{
+  background-color: #272727
+}
+  video{
+    width: 95%;
+    margin-top: 50%;
+    outline: none;
+    border-radius: 8px;
+    border: 2px solid #000000;
+    transition: .5s
+  }
+  
+.hehe video{
+      animation: 5s ohyes infinite ease;
+      animation-delay: 5s;
+}
+  @keyframes ohyes{
+    0%{border-color: #FF0000}
+    10%{border-color: #FF00B1}
+    20%{border-color: #0038FF}
+    30%{border-color: #00CAFF}
+    40%{border-color: #00FF6B}
+    50%{border-color: #2DFF00}
+    60%{border-color: #C0FF00}
+    70%{border-color: #FFC500}
+    80%{border-color: #FF6B00}
+    100%{border-color: #FF0000}
+  }
+button{
+  outline: none;
+  background-color: #5000FF;
+  color: #FFFFFF;
+  width: 120px;
+  height: 40px;
+  border: 2px solid #5000FF;
+  border-radius: 8px;
+  margin: 35px;
+ transition: .5s;
+}
+button:hover{
+  background-color: #3800B4;
+  border-color: #3800B4;
+}
+.hehe button{
+  background-color: #00A9FF;
+  border-color: #00A9FF;
+  color: black
+}
+p{opacity: 0;color: white}
+
+.hehe button:disabled{
+opacity: 1
+}
+</style>
+<body><center>
+<video id="video" loop>
+  <source type="video/mp4" src="/GotYa.mp4">
+</video>
+<button id="gg" onclick="play()">Play Now :)</button>
+</center>
+</body>
+<script>
+let gg = "false"
+function play() {
+ document.getElementById("video").play();
+ document.body.classList.toggle("hehe");
+ document.getElementById("gg").disabled = true;
+}
+</script>
+</html>
